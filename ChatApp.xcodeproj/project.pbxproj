@@ -29,12 +29,32 @@
 		9B84505C2EF5266400950B27 /* ChatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		9B8450472EF5266200950B27 /* ChatApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ChatApp;
-			sourceTree = "<group>";
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9B84508B2EF52CBD00950B27 /* Exceptions for "ChatApp" folder in "ChatApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ChatAppApp.swift,
+				Components/MessageBubble.swift,
+				Components/TitleRow.swift,
+				ContentView.swift,
+				Models/Message.swift,
+			);
+			target = 9B8450442EF5266200950B27 /* ChatApp */;
 		};
+		9B84508C2EF52CBD00950B27 /* Exceptions for "ChatApp" folder in "ChatAppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ChatAppApp.swift,
+				ContentView.swift,
+				Models/Message.swift,
+			);
+			target = 9B8450512EF5266400950B27 /* ChatAppTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
 		9B8450552EF5266400950B27 /* ChatAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ChatAppTests;
@@ -43,6 +63,15 @@
 		9B84505F2EF5266400950B27 /* ChatAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ChatAppUITests;
+			sourceTree = "<group>";
+		};
+		9B8450872EF52CBD00950B27 /* ChatApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9B84508B2EF52CBD00950B27 /* Exceptions for "ChatApp" folder in "ChatApp" target */,
+				9B84508C2EF52CBD00950B27 /* Exceptions for "ChatApp" folder in "ChatAppTests" target */,
+			);
+			path = ChatApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,7 +104,7 @@
 		9B84503C2EF5266200950B27 = {
 			isa = PBXGroup;
 			children = (
-				9B8450472EF5266200950B27 /* ChatApp */,
+				9B8450872EF52CBD00950B27 /* ChatApp */,
 				9B8450552EF5266400950B27 /* ChatAppTests */,
 				9B84505F2EF5266400950B27 /* ChatAppUITests */,
 				9B8450462EF5266200950B27 /* Products */,
@@ -107,9 +136,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				9B8450472EF5266200950B27 /* ChatApp */,
-			);
 			name = ChatApp;
 			packageProductDependencies = (
 			);
@@ -132,6 +158,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				9B8450552EF5266400950B27 /* ChatAppTests */,
+				9B8450872EF52CBD00950B27 /* ChatApp */,
 			);
 			name = ChatAppTests;
 			packageProductDependencies = (
