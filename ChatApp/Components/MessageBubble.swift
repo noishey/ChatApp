@@ -27,7 +27,7 @@ struct MessageBubble: View {
                 Text("\(message.timestamp.formatted(.dateTime.hour().minute()))")
                     .font(.caption2)
                     .foregroundColor(.gray)
-                    .padding(message.received ? .leading : .trailing)
+                    .padding(message.received ? .leading : .trailing, 25)
             }
         }
         .frame(maxWidth: .infinity, alignment: message.received ? .leading : .trailing)
@@ -37,5 +37,5 @@ struct MessageBubble: View {
 }
 
 #Preview {
-    MessageBubble(message: Message(id: "123", text: "I've been coding for sometime and Swift Coding is so much fun!", received: true, timestamp: Date()))
+    MessageBubble(message: Message(id: "123", text: "I've been coding for sometime and Swift Coding is so much fun!", received: false, timestamp: Date()))
 }
